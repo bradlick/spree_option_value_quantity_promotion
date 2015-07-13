@@ -2,4 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  spree:
+    promotion_rule_types:
+      option_value_quantity:
+        name: Option Value Quantity
+        description: Order contains a number of line items with an option value

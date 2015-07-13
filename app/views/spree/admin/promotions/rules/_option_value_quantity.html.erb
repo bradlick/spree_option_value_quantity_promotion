@@ -1,0 +1,16 @@
+<div class="panel-body">
+  <div class="form-group option_value_rule_values">
+    <%= label_tag "#{param_prefix}_preferred_eligible_value", '*Option value' %>
+    <%= hidden_field_tag "#{param_prefix}[preferred_eligible_value]", [promotion_rule.preferred_eligible_value], class: 'option-value-select', style: 'width: 100%' %>
+  </div>
+  <div class="form-group option_value_rule_comparison">
+    <%= label_tag "#{param_prefix}_preferred_quantity_comparison", '*Comparison' %>
+    <%= select_tag "#{param_prefix}[preferred_quantity_comparison]", options_for_select(Spree::Promotion::Rules::OptionValueQuantity::QUANTITY_COMPARISONS, promotion_rule.preferred_quantity_comparison), class: 'quantity-comparison-select' %>
+  </div>
+  <div class="form-group option_value_rule_quantity">
+    <%= label_tag "#{param_prefix}_preferred_quantity", '*Quantity' %>
+    <div>
+      <%= number_field_tag "#{param_prefix}[preferred_quantity]", promotion_rule.preferred_quantity, min: promotion_rule.preferred_quantity_default %>
+    </div>
+  </div>
+</div>
